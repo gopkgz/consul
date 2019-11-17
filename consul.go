@@ -6,8 +6,8 @@ import (
 	"strconv"
 
 	consul "github.com/hashicorp/consul/api"
-	"github.com/mkorenkov/microservice-prototype/nettools"
 	"github.com/pkg/errors"
+	"github.com/gopkgz/nettools"
 )
 
 // Client essential consul API
