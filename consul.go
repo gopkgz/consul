@@ -90,7 +90,7 @@ func RegistergRPCService(consulAddr string, myServiceID string, myServiceExterna
 
 	healthCheck := NewgRPCHealthCheck(consulAddr, host, port)
 
-	err = client.Register("exception-service", host, port, healthCheck)
+	err = client.Register(myServiceID, host, port, healthCheck)
 	if err != nil {
 		return errors.Wrap(err, "failed to registed service")
 	}
