@@ -1,0 +1,17 @@
+name: Lint everything
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Go Lint
+      uses: samuelmeuli/lint-action@v1.2.0
+      with:
+        auto_fix: n
+    - name: Shell Linter
+      uses: azohra/shell-linter@v0.2.0
