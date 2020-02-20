@@ -16,5 +16,3 @@ jobs:
       uses: ArangoGutierrez/GoLinty-Action@go-1.13rc1-alpine
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-    - name: Shell Linter
-      uses: azohra/shell-linter@v0.2.0
