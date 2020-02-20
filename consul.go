@@ -21,6 +21,7 @@ type client struct {
 }
 
 
+// NewConsulClient returns a Client interface for given consul address
 func NewConsulClient(addr string) (client, error) {
 	config := consul.DefaultConfig()
 	config.Address = addr
