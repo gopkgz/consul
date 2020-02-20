@@ -12,7 +12,10 @@ jobs:
     steps:
     - name: Check out code into the Go module directory
       uses: actions/checkout@v1
-    - name: Go-Linty
-      uses: ArangoGutierrez/GoLinty-Action@go-1.13rc1-alpine
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+    - name: Lint Action
+      uses: samuelmeuli/lint-action@v1.2.0
+      with:
+        github_token: ${{ secrets.LINT_GH_TOKEN }}
+        auto_fix: n
+        gofmt: y
+        golint: y
