@@ -15,4 +15,4 @@ jobs:
     - name: Run GolangCI-Lint Action by building from repository
       uses: matoous/golangci-lint-action@v1.23.3
       env:
-        GITHUB_TOKEN: ${{ secrets.LINT_GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
